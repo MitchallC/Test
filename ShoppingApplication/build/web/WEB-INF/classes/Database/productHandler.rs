@@ -1,0 +1,1 @@
+ManagedBeans.productHandler

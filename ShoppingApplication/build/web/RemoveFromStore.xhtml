@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Shopping Application</title>
+    </h:head>
+    <h:body>
+<h2>Remove From Store</h2>
+                <h:messages class="error" />
+                <h:form>
+                   <p>Item name: 
+                        <h:inputText 
+                                     maxlength="10" 
+                                     required="true" 
+                                     requiredMessage="Please enter item name" 
+                                     value="#{Products.itemName}" />
+                    </p>
+                    <p>Item ID: 
+                        <h:inputText 
+                                     maxlength="10" 
+                                     required="true" 
+                                     requiredMessage="Please enter item ID" 
+                                     value="#{Products.itemID}" />
+                    </p>
+                    <p>Quantity: 
+                        <h:inputText
+                                     maxlength="10" 
+                                     required="true" 
+                                     requiredMessage="Please enter quantity" 
+                                     value="#{Products.quantityRemove}" />
+                    </p>
+                     <p>Store Name: 
+                        <h:inputText 
+                                     maxlength="10" 
+                                     required="true" 
+                                     requiredMessage="Please enter store ID" 
+                                     value="#{Products.storeID}" />
+                    </p>                   
+                      <p><h:commandButton value="Submit" action="#{Products.removeProduct()}" />&nbsp;&nbsp;
+                        <h:commandButton type="submit" value="Back" action= "adminHome" />
+                    </p>
+                </h:form>
+    </h:body>
+</html>
+

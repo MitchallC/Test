@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Shopping Application</title>
+    </h:head>
+    <h:body>
+        
+                <h2>Administrator Register</h2>
+                <h:messages class="error" />
+                <h:form>
+                   <p>First name: 
+                        <h:inputText 
+                                     maxlength="10" 
+                                     required="true" 
+                                     requiredMessage="Please enter your first name" 
+                                     value="#{adminUI.fName}" />
+                    </p>
+                    <p>Surname: 
+                        <h:inputText 
+                                     maxlength="10" 
+                                     required="true" 
+                                     requiredMessage="Please enter your surname" 
+                                     value="#{adminUI.lName}" />
+                    </p>
+                    <p>Username: 
+                        <h:inputText
+                                     maxlength="10" 
+                                     required="true" 
+                                     requiredMessage="Please choose a username" 
+                                     value="#{adminUI.username}" />
+                    </p>
+                    <p>Password: 
+                        <h:inputSecret 
+                                       maxlength="15" 
+                                       required="true" 
+                                       requiredMessage="Please enter your password" 
+                                      
+                                       value="#{adminUI.password1}" />
+                        
+                    </p>
+                     <p>Confirm password: 
+                        <h:inputSecret
+                                       maxlength="15" 
+                                       required="true" 
+                                       requiredMessage="Please confirm your password" 
+                                       title="Confirm password: "
+                                       value="#{adminUI.password2}" />
+                        
+                    </p>
+                    
+                       <p><h:commandButton value="Submit" action="#{adminUI.register()}" />&nbsp;&nbsp;
+                        <h:commandButton type="submit" value="Back" action= "adminLogin" />
+                    </p>
+                </h:form>
+            
+    </h:body>
+</html>
+
